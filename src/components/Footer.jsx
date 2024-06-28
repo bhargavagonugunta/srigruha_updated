@@ -47,7 +47,7 @@ const Footer = () => {
       </div>
       <div>
         <p className="md:text-1xl py-2 cursor-pointer pl-2">Contact Details:</p>
-        <p className="pl-2 cursor-pointer">P No: +91000059063</p>
+        <p className="pl-2 cursor-pointer">P No: +91 9248751345</p>
         <p className="pl-2 cursor-pointer">Email: SRIGRUHAFOODS@GMAIL.COM</p>
       </div>
     </div>
