@@ -1,23 +1,33 @@
-import React from "react";
-import homelogo from "../../../public/assets/homenavlogo.png";
-import gulab from "../../../public/assets/Sweets/gulabhijam.jpg";
+import homelogo from "../../assets/homenavlogo.png";
+import gulab from "../../assets/Sweets/gulabhijam.jpg";
+import ImageSlideHome from "../imageSlider/ImageSlideHome";
 import { NavLink } from "react-router-dom";
+import "./marquee.css";
+import LessSugur from "./LessSugur";
+import Stalckus from "./Stalckus";
 
 const HomePage = () => {
   return (
     <div>
-      <h2 className="py-[100px] text-center sm:text-3xl tracking-widest text-green-600	 sm:first-letter:text-5xl first-letter:text-2xl ">
+      <div className="div">
+        <marquee className="scrolling-text font-Hind ">
+          Orders Placed Outside Guntur will be Delivered With in 2-3 Working
+          days.
+        </marquee>
+      </div>
+      <ImageSlideHome />
+      <h2 className="py-[100px] text-center sm:text-3xl tracking-widest 	 sm:first-letter:text-5xl first-letter:text-2xl ">
         DELIVERING SMILES, WHEREVER YOU DESIRE
       </h2>
       <div className="md:flex md:flex-row flex mx-16 sm:mx-48 md:mx-4  flex-col gap-4 lg:gap-16 xl:mx-[200px] justify-around">
         <div className="border-4 border-amber-600 rounded-3xl  lg:w-[300px]">
-          <h2 className="text-center  py-24 sm:text-2xl font-semibold	sm:first-letter:text-3xl  first-letter:text-2xl">
+          <h2 className="text-center   py-24 sm:text-2xl font-semibold	sm:first-letter:text-3xl  first-letter:text-2xl">
             Delivering <br />
             sweetness,one <br /> doorstep at a time
           </h2>
         </div>
         <div className="border-4 border-amber-600 rounded-3xl lg:w-[300px]  ">
-          <h2 className="text-center px-12 py-24 sm:text-2xl font-semibold	sm:first-letter:text-3xl first-letter:text-2xl ">
+          <h2 className="text-center  py-24 sm:text-2xl font-semibold	sm:first-letter:text-3xl first-letter:text-2xl ">
             Sweet delights
             <br /> delivered, <br /> nationwide
           </h2>
@@ -40,7 +50,7 @@ const HomePage = () => {
         </div>
         <div>BEYOND AUTHENTIC</div>
       </nav>
-      <h2 className="text-center tracking-widest text-3xl py-16 my-16 text-green-600 ">
+      <h2 className="text-center tracking-widest text-3xl md:py-16 md:my-16 my-8 ">
         BEST SELLER
       </h2>
       <div className="md:flex md:flex-row flex flex-col   justify-center items-center gap-8  md:w-4/6 mx-auto ">
@@ -57,11 +67,13 @@ const HomePage = () => {
             flavored with cardamom, saffron, and rose water. Here's some
             feedback on Gulab Jamun
           </p>
-          <p className="bg-amber-600 text-white px-12 m-4 p-2 mx-auto rounded-md">
+          <p className="bg-amber-600 text-white px-8 m-4 p-2 mx-auto rounded-md">
             <NavLink to="/"> SHOP NOW</NavLink>
           </p>
         </div>
       </div>
+      <LessSugur />
+      <Stalckus />
       <div className="bg-amber-600 text-white md:text-3xl text-2xl py-6 text-center my-16 tracking-wide">
         PURITY IN GOOD TASTE! PURITY IN GOOD WILL!
       </div>
@@ -72,8 +84,8 @@ const HomePage = () => {
         <iframe
           src="https://www.youtube.com/embed/gyVgkl8czZ4"
           title="A YouTube video"
-          frameborder="0"
-          allowfullscreen
+          frameBorder="0"
+          allowFullScreen
           className="mx-auto  w-[400px] h-[400px] md:w-[700px] md:h-[400px]"
         ></iframe>
         <p className="text-white py-10 px-8 text-center">

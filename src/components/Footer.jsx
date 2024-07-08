@@ -1,10 +1,10 @@
 import React from "react";
-import house from "../../public/assets/house.png";
+import house from "../assets/house.png";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="bg-green-700 md:flex md:flex-row flex flex-col md:justify-around gap-4 lg:gap-16 text-white px-8 mt-6 ">
+    <div className="bg-[#dc8e2c] md:flex md:flex-row flex flex-col md:justify-around gap-4 lg:gap-16 text-white p-12  ">
       <div className="xl:px-10">
         <p className="flex items-center cursor-pointer ">
           <NavLink to="/homepage">
@@ -34,11 +34,16 @@ const Footer = () => {
       <div>
         <p className="lg:text-1xl font-semibold py-1">GET IN TOUCH</p>
         <ul className="flex gap-2">
-          <li className="text-3xl text-yellow-300 cursor-pointer">
-            <ion-icon name="logo-facebook"></ion-icon>
+          <li className=" text-3xl cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 active:-translate-y-0.5">
+            <a href="https://www.facebook.com/srigruhafoods" target="_blank">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
           </li>
-          <li className="text-3xl text-yellow-300 cursor-pointer">
+          <li className="text-3xl  cursor-pointer  transform transition-transform duration-300 hover:-translate-y-1 active:-translate-y-0.5">
             <ion-icon name="logo-instagram"></ion-icon>
+          </li>
+          <li className="text-3xl  cursor-pointer  transform transition-transform duration-300 hover:-translate-y-1 active:-translate-y-0.5">
+            <ion-icon name="logo-twitter"></ion-icon>
           </li>
         </ul>
       </div>

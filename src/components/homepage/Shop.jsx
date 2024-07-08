@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <div className="pb-20">
-      <h2 className="text-center text-4xl py-16  text-green-600">SWEET</h2>
+      <h2 className="text-center text-4xl py-16 ">SWEET</h2>
       <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:mx-10   gap-8 ">
         {homeData.map((item, index) => (
           <div
@@ -38,7 +38,7 @@ const Home = () => {
           </div>
         ))}
       </div>
-      <h2 className="text-4xl py-16 text-center  text-green-600">SNACKS</h2>
+      <h2 className="text-4xl py-16 text-center  ">SNACKS</h2>
       <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 px-auto  gap-8 m-8">
         {SnacksData.map((item, index) => (
           <div
@@ -65,7 +65,7 @@ const Home = () => {
           </div>
         ))}
       </div>
-      <h2 className="text-center text-4xl py-16  text-green-600"> PICKLE </h2>
+      <h2 className="text-center text-4xl py-16 "> PICKLE </h2>
       <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 px-auto  gap-8 m-8">
         {PicklesData.map((item, index) => (
           <div

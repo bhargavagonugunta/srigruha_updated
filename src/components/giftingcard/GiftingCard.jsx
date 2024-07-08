@@ -1,6 +1,6 @@
 import React from "react";
-import gift from "../../../public/assets/gift.jpg";
-import life from "../../../public/assets/life-is-sweet-logo.avif";
+import gift from "../../assets/gift.jpg";
+import life from "../../assets/life-is-sweet-logo.avif";
 import { GiftBoxes, GiftCombo } from "../homepage/homedata";
 import { useDispatch } from "react-redux";
 import { AddCart } from "../CartSlice";
@@ -13,14 +13,23 @@ const GiftingCard = () => {
   }
   return (
     <div>
-      <div>
-        <img src={gift} className="opacity-80 px-4 " />
+      <div
+        className="relative h-[600px] "
+        style={{
+          background: `url(${gift}) center center / cover no-repeat`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <h3 className="absolute inset-0 flex items-center justify-center md:text-4xl text-white text-2xl">
+          ENJOY YOUR DAY
+        </h3>
       </div>
-      <div className="text-center my-10">
-        <img src={life} className="mx-auto py-6 px-4" />
+      <div className="text-center my-10 ">
+        <img src={life} className="mx-auto  py-6 px-4" />
       </div>
       <div>
-        <h2 className="sm:text-4xl text-2xl text-green-600 py-4 text-center">
+        <h2 className="sm:text-4xl text-2xl  py-4 text-center">
           Gift With Sweetness
         </h2>
         <p className="md:text-center px-8">
@@ -33,25 +42,21 @@ const GiftingCard = () => {
           of your home?
         </p>
       </div>
-      <h2 className="text-center sm:text-4xl text-2xl tracking-wide text-green-600 py-16">
+      <h2 className="text-center sm:text-4xl text-2xl tracking-wide  py-16">
         GIFT BOXES
       </h2>
       <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1  gap-8  ">
         {GiftBoxes.map((item, index) => (
           <div
             key={index}
-            className="border shadow-xl rounded-xl mx-auto h-[360px]"
+            className="border shadow-xl rounded-xl mx-auto h-[400px]"
           >
-            <div className="w-[300px]">
-              <img
-                src={item.image}
-                className="w-full rounded-l-md rounded-r-md"
-              />
+            <div className="w-[300px] m-4">
+              <img src={item.image} className="w-full rounded-md" />
             </div>
             <div className="flex flex-col justify-center items-center gap-2">
               <h2 className="text-2xl  py-4">{item.item}</h2>
               <p className="text-orange-500 text-center ">
-                {" "}
                 Rs. {item.price}.00
               </p>
               <motion.button
@@ -68,7 +73,7 @@ const GiftingCard = () => {
       </div>
 
       <div className="my-10 px-6">
-        <h2 className="sm:text-4xl text-2xl text-green-600 pb-4 md:text-center">
+        <h2 className="sm:text-4xl text-2xl pb-4 md:text-center">
           Delicious Combo Sweets As A Token Of Gift
         </h2>
         <p>
@@ -79,20 +84,17 @@ const GiftingCard = () => {
           experience for your taste buds.
         </p>
       </div>
-      <h2 className="sm:text-4xl text-2xl text-green-600 pb-12 pt-6 text-center">
+      <h2 className="sm:text-4xl text-2xl  pb-12 pt-6 text-center">
         COMBO OFFERS!
       </h2>
       <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1  gap-8 ">
         {GiftCombo.map((item, index) => (
           <div
             key={index}
-            className="border shadow-xl rounded-xl mx-auto h-[400px]"
+            className="border shadow-xl rounded-xl mx-auto h-[430px]"
           >
-            <div className="w-[300px]">
-              <img
-                src={item.image}
-                className="w-full rounded-l-md rounded-r-md h-60"
-              />
+            <div className="w-[300px] m-4">
+              <img src={item.image} className="w-full  rounded-md h-60" />
             </div>
             <div className="flex flex-col justify-center items-center gap-2">
               <h2 className="text-2xl  py-4">{item.item}</h2>
@@ -113,7 +115,7 @@ const GiftingCard = () => {
       </div>
 
       <div className="py-8 px-6">
-        <h2 className="sm:text-4xl text-2xl text-green-600 py-4 ">
+        <h2 className="sm:text-4xl text-2xl  py-4 ">
           Gift Delicious Sweet Boxes On Special Occasions
         </h2>
         <p>
@@ -132,7 +134,7 @@ const GiftingCard = () => {
         </p>
       </div>
       <div className="px-6">
-        <h2 className="sm:text-4xl text-2xl text-green-600 py-4 ">
+        <h2 className="sm:text-4xl text-2xl  py-4 ">
           Order Gift Boxes From Srigruhafoods
         </h2>
         <p className="text-[#302D2B]">

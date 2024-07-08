@@ -1,0 +1,55 @@
+.demo {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 3px;
+}
+
+.demo::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  left: 0;
+  bottom: 1px;
+  height: 0.5px;
+  background-color: #c8724a;
+  transition: width 0.6s;
+}
+
+.demo:hover::after {
+  width: 100%;
+  transition: width 0.3s ease-in-out;
+}
+
+.active {
+  text-decoration: underline;
+}
+.active:hover {
+  text-decoration: none;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  visibility: hidden;
+  background-color: #c8724a;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: -225%; /* Position the tooltip above the icons */
+  left: 50%;
+  margin-left: -60px;
+  width: 130px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}

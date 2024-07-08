@@ -5,21 +5,30 @@ import imageo from "../celebration/image.png";
 const Celebration = () => {
   return (
     <div>
-      <div className="text-center relative my-12">
-        <img src={image} className="h-[400px] w-full bg-cover opacity-80" />
-        <div className="absolute top-[150px]  xl:left-[400px] left-[100px] sm:left-[180px] ">
-          <h2 className="lg:text-6xl md:text-3xl text-2xl text-center tracking-widest	text-white">
-            BEAUTIFUL BLESSINGS
-          </h2>
-          <button className="bg-[#e7e9e9] tracking-widest my-8 px-4 md:px-24 py-2 rounded-md text-orange-500">
-            PLAN YOUR WEDDING
-          </button>
+      <div
+        className="relative h-[600px] "
+        style={{
+          background: `url(${image}) center center / cover no-repeat`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="absolute inset-0 flex items-center justify-center ">
+          <div className="flex flex-col justify-center items-center ">
+            <h2 className="lg:text-6xl md:text-3xl text-2xl text-center tracking-widest	text-white">
+              BEAUTIFUL BLESSINGS
+            </h2>
+            <button className="bg-orange-400 tracking-widest my-8 px-4 md:px-24 py-2 rounded-md text-white">
+              PLAN YOUR WEDDING
+            </button>
+          </div>
         </div>
       </div>
+
       <h2 className="text-4xl py-40 tracking-widest font-semibold text-center ">
         TURN YOUR WEDDING INTO A CELEBRATIONS
       </h2>
-      <p className="text-center text-2xl py-22">
+      <p className="md:text-center  px-4 text-2xl py-22">
         An Indian wedding is almost a full-scale festival - with celebrations
         all around that creates an aura of joy and excitement. In such an
         environment, happiness knows no bounds. The exchange of gifts and
@@ -27,11 +36,16 @@ const Celebration = () => {
         we have a range of Wedding Hampers that will truly capture the emotion,
         colours and exhilaration of the event.
       </p>
-      <div>
-        <img src={imageo} className="h-[350px] w-full my-24" />
-      </div>
+      <div
+        className="relative h-[400px] my-16 "
+        style={{
+          background: `url(${imageo}) center center / cover no-repeat`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      ></div>
 
-      <div className="bg-orange-400 md:mx-28 p-4 text-white">
+      <div className="bg-orange-300 md:mx-28 p-4 text-white my-2">
         <h2 className="text-center text-2xl tracking-widest	py-4">
           PERSONALIZE YOUR WEDDINGS SWEETS
         </h2>
@@ -64,8 +78,7 @@ const Celebration = () => {
           <br />
           <input
             type="date"
-            placeholder="NAME"
-            className="border border-white placeholder:text-slate-500 bg-transparent p-2 md:w-[400px]"
+            className="border text-slate-500 border-white placeholder:text-slate-500 bg-transparent p-2 md:w-[400px]"
           />
           <input
             type="time"

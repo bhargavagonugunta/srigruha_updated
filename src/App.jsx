@@ -13,21 +13,24 @@ import Homepage from "./components/homepage/HomePage";
 import Footer from "./components/Footer";
 import { Provider } from "react-redux";
 import Whatsup from "./Whatsup";
+import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
-    <div>
+    <div className="bg-[#f6f5ec]">
       <BrowserRouter>
         <Provider store={store}>
           <Navbar />
+          <ScrollToTop />
+
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Homepage />} />
+            <Route path="/shop" element={<Home />} />
             <Route path="/gifting" element={<Gifting />} />
             <Route path="/celebration" element={<Celebration />} />
             <Route path="/card" element={<GiftingCard />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="Homepage" element={<Homepage />} />
           </Routes>
           <Whatsup />
           <Footer />
